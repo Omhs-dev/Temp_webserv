@@ -1,0 +1,110 @@
+==804701== Memcheck, a memory error detector
+==804701== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==804701== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==804701== Command: ./webserv config/test.conf
+==804701== Parent PID: 12576
+==804701== 
+==804701== Conditional jump or move depends on uninitialised value(s)
+==804701==    at 0x10E8F3: Server::run() (Server.cpp:68)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EA0E: Server::handleNewConnection(int) (Server.cpp:90)
+==804701== 
+==804701== Conditional jump or move depends on uninitialised value(s)
+==804701==    at 0x12EBAC: std::vector<ServerConfig, std::allocator<ServerConfig> >::operator=(std::vector<ServerConfig, std::allocator<ServerConfig> > const&) (vector.tcc:213)
+==804701==    by 0x12EA4B: HTTPConfigs::HTTPConfigs(HTTPConfigs const&) (HTTPConfigs.cpp:10)
+==804701==    by 0x10ECF8: Server::getConfigs() (Server.cpp:140)
+==804701==    by 0x11B065: HTTPResponse::handleGet() (HTTPResponse.cpp:42)
+==804701==    by 0x11AF58: HTTPResponse::generateResponse() (HTTPResponse.cpp:30)
+==804701==    by 0x113755: Client::handleResponse() (Client.cpp:46)
+==804701==    by 0x113320: Client::clientConnectionProcess() (Client.cpp:11)
+==804701==    by 0x10EB6D: Server::handleClient(int) (Server.cpp:120)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EB2E: Server::handleClient(int) (Server.cpp:118)
+==804701== 
+==804701== Use of uninitialised value of size 8
+==804701==    at 0x12F3C8: std::vector<ServerConfig, std::allocator<ServerConfig> >::size() const (stl_vector.h:993)
+==804701==    by 0x12ECE1: std::vector<ServerConfig, std::allocator<ServerConfig> >::operator=(std::vector<ServerConfig, std::allocator<ServerConfig> > const&) (vector.tcc:235)
+==804701==    by 0x12EA4B: HTTPConfigs::HTTPConfigs(HTTPConfigs const&) (HTTPConfigs.cpp:10)
+==804701==    by 0x10ECF8: Server::getConfigs() (Server.cpp:140)
+==804701==    by 0x11B065: HTTPResponse::handleGet() (HTTPResponse.cpp:42)
+==804701==    by 0x11AF58: HTTPResponse::generateResponse() (HTTPResponse.cpp:30)
+==804701==    by 0x113755: Client::handleResponse() (Client.cpp:46)
+==804701==    by 0x113320: Client::clientConnectionProcess() (Client.cpp:11)
+==804701==    by 0x10EB6D: Server::handleClient(int) (Server.cpp:120)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EB2E: Server::handleClient(int) (Server.cpp:118)
+==804701== 
+==804701== Use of uninitialised value of size 8
+==804701==    at 0x12F3D0: std::vector<ServerConfig, std::allocator<ServerConfig> >::size() const (stl_vector.h:993)
+==804701==    by 0x12ECE1: std::vector<ServerConfig, std::allocator<ServerConfig> >::operator=(std::vector<ServerConfig, std::allocator<ServerConfig> > const&) (vector.tcc:235)
+==804701==    by 0x12EA4B: HTTPConfigs::HTTPConfigs(HTTPConfigs const&) (HTTPConfigs.cpp:10)
+==804701==    by 0x10ECF8: Server::getConfigs() (Server.cpp:140)
+==804701==    by 0x11B065: HTTPResponse::handleGet() (HTTPResponse.cpp:42)
+==804701==    by 0x11AF58: HTTPResponse::generateResponse() (HTTPResponse.cpp:30)
+==804701==    by 0x113755: Client::handleResponse() (Client.cpp:46)
+==804701==    by 0x113320: Client::clientConnectionProcess() (Client.cpp:11)
+==804701==    by 0x10EB6D: Server::handleClient(int) (Server.cpp:120)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EB2E: Server::handleClient(int) (Server.cpp:118)
+==804701== 
+==804701== Use of uninitialised value of size 8
+==804701==    at 0x12FDBA: __gnu_cxx::__normal_iterator<ServerConfig const*, std::vector<ServerConfig, std::allocator<ServerConfig> > >::__normal_iterator(ServerConfig const* const&) (stl_iterator.h:1077)
+==804701==    by 0x12F49D: std::vector<ServerConfig, std::allocator<ServerConfig> >::end() const (stl_vector.h:904)
+==804701==    by 0x12ED18: std::vector<ServerConfig, std::allocator<ServerConfig> >::operator=(std::vector<ServerConfig, std::allocator<ServerConfig> > const&) (vector.tcc:238)
+==804701==    by 0x12EA4B: HTTPConfigs::HTTPConfigs(HTTPConfigs const&) (HTTPConfigs.cpp:10)
+==804701==    by 0x10ECF8: Server::getConfigs() (Server.cpp:140)
+==804701==    by 0x11B065: HTTPResponse::handleGet() (HTTPResponse.cpp:42)
+==804701==    by 0x11AF58: HTTPResponse::generateResponse() (HTTPResponse.cpp:30)
+==804701==    by 0x113755: Client::handleResponse() (Client.cpp:46)
+==804701==    by 0x113320: Client::clientConnectionProcess() (Client.cpp:11)
+==804701==    by 0x10EB6D: Server::handleClient(int) (Server.cpp:120)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EB2E: Server::handleClient(int) (Server.cpp:118)
+==804701== 
+==804701== Use of uninitialised value of size 8
+==804701==    at 0x12FDBA: __gnu_cxx::__normal_iterator<ServerConfig const*, std::vector<ServerConfig, std::allocator<ServerConfig> > >::__normal_iterator(ServerConfig const* const&) (stl_iterator.h:1077)
+==804701==    by 0x12F44D: std::vector<ServerConfig, std::allocator<ServerConfig> >::begin() const (stl_vector.h:884)
+==804701==    by 0x12ED2A: std::vector<ServerConfig, std::allocator<ServerConfig> >::operator=(std::vector<ServerConfig, std::allocator<ServerConfig> > const&) (vector.tcc:238)
+==804701==    by 0x12EA4B: HTTPConfigs::HTTPConfigs(HTTPConfigs const&) (HTTPConfigs.cpp:10)
+==804701==    by 0x10ECF8: Server::getConfigs() (Server.cpp:140)
+==804701==    by 0x11B065: HTTPResponse::handleGet() (HTTPResponse.cpp:42)
+==804701==    by 0x11AF58: HTTPResponse::generateResponse() (HTTPResponse.cpp:30)
+==804701==    by 0x113755: Client::handleResponse() (Client.cpp:46)
+==804701==    by 0x113320: Client::clientConnectionProcess() (Client.cpp:11)
+==804701==    by 0x10EB6D: Server::handleClient(int) (Server.cpp:120)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a stack allocation
+==804701==    at 0x10EB2E: Server::handleClient(int) (Server.cpp:118)
+==804701== 
+==804701== Conditional jump or move depends on uninitialised value(s)
+==804701==    at 0x11AE94: HTTPResponse::~HTTPResponse() (HTTPResponse.cpp:19)
+==804701==    by 0x11386E: Client::~Client() (Client.cpp:58)
+==804701==    by 0x10EB9D: Server::handleClient(int) (Server.cpp:122)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701==  Uninitialised value was created by a heap allocation
+==804701==    at 0x4846FA3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==804701==    by 0x11328C: Client::Client(int) (Client.cpp:4)
+==804701==    by 0x10EB61: Server::handleClient(int) (Server.cpp:119)
+==804701==    by 0x10E9CE: Server::run() (Server.cpp:79)
+==804701==    by 0x13771F: main (main.cpp:28)
+==804701== 
+==804701== 
+==804701== HEAP SUMMARY:
+==804701==     in use at exit: 0 bytes in 0 blocks
+==804701==   total heap usage: 468 allocs, 468 frees, 148,484 bytes allocated
+==804701== 
+==804701== All heap blocks were freed -- no leaks are possible
+==804701== 
+==804701== For lists of detected and suppressed errors, rerun with: -s
+==804701== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)
